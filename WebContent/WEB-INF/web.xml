@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>EsempioServlet2</display-name>
+  <welcome-file-list>
+    <welcome-file>html/terzo.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>PES</servlet-name>
+  	<servlet-class>com.azienda.progetto.web.PrimoEsempioServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>PES</servlet-name>
+  	<url-pattern>/primaServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!--  questo con annotation lo fa in automatico
+    <servlet>
+  	<servlet-name>SES</servlet-name>
+  	<servlet-class>com.azienda.progetto.web.SecondaServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>SES</servlet-name>
+  	<url-pattern>/secondaServlet</url-pattern>
+  </servlet-mapping>
+   -->
+  
+  
+  
+  
+</web-app>
