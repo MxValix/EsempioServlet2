@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.azienda.progetto.model.TestBean;
 import com.azienda.progetto.utils.Costanti;
 
 @WebServlet("/sett")
@@ -23,6 +24,9 @@ public class SettimaServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		TestBean tb = (TestBean) getServletContext().getAttribute(Costanti.CHIAVE_SERVLET_CONTEXT);
+		System.out.println("Oggetto nel servlet context: " + tb.getNome());
+		
 		String y = req.getParameter("bbb");
 		System.out.println("Settima servlet, utente: " + y);
 		
